@@ -1,0 +1,44 @@
+
+<!--<nav class="navbar">
+  <div class="container-fluid">
+    <a class="nav-link" [routerLink]="['/movie/about']" routerLinkActive="active"><i class="col fa fa-info-circle " style="font-size:48px;"></i></a>
+  </div>
+</nav>-->
+<div class="col-12 mt-3 md:col-6 md:col-offset-3 md:mt-3">
+  <div class="row">
+  <h2 class="flex justify-content-center fs-1 title">Find your <span class="text-bg-gradient" style="margin-left: 0.5rem; margin-right: 0.5rem;"> favourite </span> movie.</h2>
+
+  <div class="col mt-5">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()" autocomplete="off"  class="flex justify-content-center">
+
+      <div class="input-group mb-3" style="width: 50%;">
+        <span class="input-group-text" id="basic-addon1" style="background: rgb(54, 53, 53); ">🔍</span>
+        <input type="text" formControlName="search" class="form-control input" placeholder="search"  placeholder="Ex.Titanic">
+      </div>
+       <!--About -->
+       <!--<nav class="flex justify-content-center ml-2">
+         <a class="nav-link" [routerLink]="['/movie/about']" routerLinkActive="active"><i class="col fa fa-info-circle " style="font-size:28px;"></i></a>
+       </nav>-->
+    </form>
+    </div>
+    <hr>
+
+    <!--Spinner-->
+    <div class="d-flex justify-content-center mt-8" *ngIf="flgLoading">
+      <div class="spinner-border text-light" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <div>
+  </div>
+  </div>
+</div>
+
+  <!--Card list-->
+  <div class="flex m-2 justify-content-center flex-wrap" *ngIf="!flgLoading">
+      <div *ngFor="let search of movies.Search">
+        <app-card *ngIf="search.Poster!=='N/A'" [search]="search"></app-card>
+      </div>
+  </div>
+  <br>
+  <br>

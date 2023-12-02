@@ -1,0 +1,63 @@
+<div class="flex flex-row flex-wrap justify-content-center mt-8 fadein animation-duration-1000">
+
+  <div class="flex align-items-center bg-primary font-bold border-round m-2">
+    <img [src]="movieDetails?.Poster" class="img-fluid" alt="">
+    <hr>
+  </div>
+    <div class="flex flex-wrap justify-content-left font-bold border-round m-2 ">
+      <div class="flex flex-column bg-primary font-bold border-round m-2 ">
+        <h3 class="text-white">{{movieDetails?.Title}}</h3>
+        <span class="text-xs text-500 ">
+          {{movieDetails?.Year}} | {{movieDetails?.Runtime}}</span>
+        <br>
+        <span  style="color: orange;">Director:</span>
+        <span class="text-sm">{{movieDetails?.Director}}</span>
+        <hr>
+        <span style="color: orange;" >Award:</span>
+        <span class="text-sm">{{movieDetails?.Awards}}</span>
+        <hr>
+        <span  style="color: orange;">Actors:</span>
+        <span class="text-sm">{{movieDetails?.Actors}}</span>
+        <hr>
+        <span  style="color: orange;">Country:</span>
+        <span class="text-sm">{{movieDetails?.Country}}</span>
+        <hr>
+        <span  style="color: orange;">Language:</span>
+        <span class="text-sm">{{movieDetails?.Language}}</span>
+        <hr>
+        <span  style="color: orange;">Writer:</span>
+        <span class="text-sm">{{movieDetails?.Writer}}</span>
+        <hr>
+      </div>
+
+        <div class="flex flex-column bg-primary font-bold border-round ml-4 xl:mt-6 lg:mt-6 " >
+          <br><br>
+          <span  style="color: orange;">Genre:</span>
+          <span class="text-sm">{{movieDetails?.Genre}}</span>
+          <hr>
+          <span  style="color: orange;">Realease:</span>
+          <span class="text-sm">{{movieDetails?.Released}}</span>
+          <hr>
+          <div *ngFor="let i of movieDetails?.Ratings">
+            <label style="color: orange;" class="text-sm">{{i.Source}}</label>
+            <span class="ml-2 badge text-bg-warning">
+             {{i.Value}}
+            </span>
+
+          </div>
+          <hr>
+          <button type="button" class="btn btn-light" [routerLink]="['/movie/search']">
+             Go home
+         </button>
+        </div>
+    </div>
+</div>
+
+<div class="flex mt-1 justify-content-center fadeindown  animation-duration-1000">
+  <div class="flex xl:w-7 lg:w-12  flex-column bg-primary font-bold border-round m-2">
+    <span  style="color: orange;">Description:</span>
+    <span >{{movieDetails?.Plot}}</span>
+  </div>
+
+</div>
+

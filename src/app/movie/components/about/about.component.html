@@ -1,0 +1,74 @@
+<div style="background-color: red;">
+  esti
+  <div style="background: inherit;">
+    gika
+
+  </div>
+  <div>
+    hol
+  </div>
+</div>
+
+<div style="background-color: red;" >
+  <div class="flex flex-column">
+    <h1>
+      OTT Detalis
+     <button type="button" class="btn btn-light" [routerLink]="['/movie/search']">
+        Go home
+     </button>
+
+    </h1>
+
+    <hr>
+    <p>
+     Get Streaming details of Movie and TV Shows. We support 150+ Streaming platforms in US and India such as HBO, YouTube, Netflix , Primve Video, Hotstar, Hulu, etc . (use our OTT Providers endpoint to get the full list OTT providers we support) . In additon to streaming info we also provide basic details on any given movie title.
+     Flix OTT Details : Get the BIGGEST Movie and TV show API in the internet.
+    </p>
+
+     <span>— Data —</span>
+     <br>
+     <ol>
+       <li *ngFor="let d of data" class="font-medium">
+        {{d}}
+       </li>
+     </ol>
+     <br>
+     <span>— Features —</span>
+     <br>
+     <ol>
+       <li *ngFor="let f of feature" class="font-medium">
+        {{f}}
+       </li>
+     </ol>
+
+     <p>
+       ** If you’d like to get additional data, please don’t hesitate to contact us. We will enrich our API for you.
+     </p>
+
+     <span>— Supported Streaming Platforms —</span>
+     <br>
+     <p class="text-justify sm: text-center m-2 mb-4">
+       <span class="font-bold">US:</span><br>
+      Netflix, Amazon Prime Video, Disney Plus, fuboTV, Apple TV Plus, Apple iTunes, Hulu, HBO Max, Peacock, Peacock Premium, Amazon Video, Google Play Movies,
+      YouTube, YouTube Premium, YouTube Free, HBO Now, CBS, Funimation Now, FandangoNOW, IMDb TV, The Roku Channel, Hoopla, The CW, CW Seed, Vudu, VUDU Free,
+      Quibi, Starz, Criterion Channel, Showtime, PBS, Pantaflix, FXNow, Tubi TV, DC Universe, Kanopy, Comedy Central, Microsoft Store, Crunchyroll, Sun Nxt,
+      Redbox, Max Go, HBO Go, ABC, DIRECTV, Tribeca Shortlist, Crackle, AMC Theatres, AMC, Fandor, Curiosity Stream, NBC, Epix, Freeform, History, Syfy, A&E,
+      Lifetime, Shudder, Screambox, Acorn TV, Sundance Now, Popcornflix, BritBox, GuideDoc, realeyz, Mubi, Fandango, Netflix Kids, Pantaya, Boomerang, Urban Movie Channel,
+       History Vault, Dove Channel, Yupp TV, Eros Now, Magnolia Selects, WWE Network, MyOutdoorTV, Nickhits Amazon Channel, Noggin Amazon Channel, Hopster TV,
+       Laugh Out Loud, Smithsonian Channel, Pure Flix, Hallmark Movies, Lifetime Movie Club, PBS Kids Amazon Channel, Boomerang Amazon Channel, Cinemax Amazon Channel,
+       Pantaya Amazon Channel, Hallmark Movies Now Amazon Channel, PBS Masterpiece Amazon Channel, Viewster Amazon Channel, MZ Choice Amazon Channel, Sling TV, Pluto TV,
+       HBO Now Amazon Channel, Showtime Amazon Channel, CBS All Access Amazon Channel, Classix, Dekkoo, Shout! Factory TV, Chai Flicks, OVID, HiDive, Mhz Choice, Retrocrush,
+        Starz Play Amazon Channel, Shudder Amazon Channel, Mubi Amazon Channel, AcornTV Amazon Channel, BritBox Amazon Channel, Fandor Amazon Channel, Screambox Amazon Channel,
+        Sundance Now Amazon Channel, Cartoon Network, Adult Swim, USA Network, Fox, FlixFling, Bet+ Amazon Channel, Rakuten Viki, AMC on Demand, Darkmatter TV, TCM, Bravo TV, TNT,
+         Food Network, BBC America, IndieFlix, AHCTV, TLC, HGTV, DIY Network, Investigation Discovery, Science Channel, Destination America, Animal Planet, Discovery Life,
+          Discovery, Motor Trend, Cooking Channel, Travel Channel, Paramount Network, Here TV, TV Land, Logo TV and VH1
+      <br>
+      <span class="font-bold">INDIA:</span>
+      <br>
+      Netflix, Amazon Prime Video, Hotstar, Voot, Viu, Jio Cinema, Zee5, Apple iTunes, Eros Now, Google Play Movies, Mubi, Apple TV Plus, Sony Liv,
+      YouTube, GuideDoc, Netflix Kids, Tubi TV, Bookmyshow, Yupp TV, Sun Nxt, Crunchyroll, Hoichoi, Alt Balaji, Hungama Play, Curiosity Stream,
+     </p>
+ </div>
+</div>
+
+
